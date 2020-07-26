@@ -856,6 +856,10 @@ drawbar(Monitor *m)
 	int x, w, tw = 0;
 	int boxs = drw->fonts->h / 9;
 	int boxw = drw->fonts->h / 6 + 2;
+	char *ts = stext;
+    char *tp = stext;
+    int tx = 0;
+    char ctmp;
 	unsigned int i, occ = 0, urg = 0;
 	Client *c;
 
@@ -863,7 +867,17 @@ drawbar(Monitor *m)
 	if (m == selmon) { /* status is only drawn on selected monitor */
 		drw_setscheme(drw, scheme[SchemeNorm]);
 		tw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
-		drw_text(drw, m->ww - tw, 0, tw, bh, 0, stext, 0);
+		while (1) {
+			if ((unsigned int)*ts > LENGTH(colors)) { ts++; continue ; }
+			ctmp = *ts;
+			*ts = '\0';
+			drw_text(drw, m->ww - sw + tx, 0, sw - tx, bh, 0, tp, 0);
+			tx += TEXTW(tp) -lrpad;
+			if (ctmp == '\0') { break; }
+			drw_setscheme(drw, scheme[(unsigned int)(ctmp-1)]);
+			*ts = ctmp;
+			tp = ++ts;
+		}
 	}
 
 	for (c = m->clients; c; c = c->next) {
