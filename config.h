@@ -22,10 +22,24 @@ static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#770000";
 static char selbgcolor[]            = "#A35941";
+static char col_background[]  = "#121212";
+static char col_foreground[]  = "#e8e8e8";
+static char col_red[]         = "#d75f5f";
+static char col_yellow[]      = "#d8ad4c";
+static char col_green[]       = "#72a25a";
+static char col_blue[]        = "#597bc5";
+static char col_cyan[]        = "#4a8382";
+static char col_magenta[]     = "#8787af";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+	   [SchemeYellow]  = { col_background,  col_yellow,      col_yellow  },
+	   [SchemeRed]     = { col_background,  col_red,         col_red  },
+	   [SchemeGreen]   = { col_background,  col_green,       col_green },
+	   [SchemeBlue]    = { col_background,  col_blue,        col_blue },
+	   [SchemeMagenta] = { col_background,  col_magenta,     col_magenta },
+	   [SchemeCyan]    = { col_foreground,  col_cyan,        col_cyan }
 };
 
 typedef struct {
