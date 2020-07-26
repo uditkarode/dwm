@@ -12,8 +12,8 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
-	"Hermit-Regular:size=12:antialias=true:autohint=true",
-	"Symbols Nerd Font:size=12:antialias=true:autohint=true"
+	"Cascadia Mono PL:size=12:antialias=true:autohint=true",
+	"Apple Color Emoji:size=12:antialias=true:autohint=true"
 };
 static char dmenufont[]             = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
@@ -21,7 +21,7 @@ static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#770000";
-static char selbgcolor[]            = "#005577";
+static char selbgcolor[]            = "#A35941";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
