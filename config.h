@@ -12,7 +12,7 @@ static const int smartgaps          = 1;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
-	"Cascadia Mono PL:size=12:antialias=true:autohint=true",
+	"Cascadia Mono PL:size=14:antialias=true:autohint=true",
 	"Apple Color Emoji:size=12:antialias=true:autohint=true"
 };
 static char dmenufont[]             = "monospace:size=10";
