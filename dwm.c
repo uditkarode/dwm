@@ -47,6 +47,8 @@
 #include "drw.h"
 #include "util.h"
 
+#define TBPADDING 12
+
 /* macros */
 #define BUTTONMASK              (ButtonPressMask|ButtonReleaseMask)
 #define CLEANMASK(mask)         (mask & ~(numlockmask|LockMask) & (ShiftMask|ControlMask|Mod1Mask|Mod2Mask|Mod3Mask|Mod4Mask|Mod5Mask))
@@ -61,7 +63,7 @@
 #define MOUSEMASK               (BUTTONMASK|PointerMotionMask)
 #define MOD(N,M)                ((N)%(M) < 0 ? (N)%(M) + (M) : (N)%(M))
 #define WIDTH(X)                ((X)->w + 2 * (X)->bw)
-#define HEIGHT(X)               ((X)->h + 2 * (X)->bw)
+#define HEIGHT(X)               ((X)->h + TBPADDING * (X)->bw)
 #define NUMTAGS			(LENGTH(tags) + LENGTH(scratchpads))
 #define TAGMASK			((1 << NUMTAGS) - 1)
 #define SPTAG(i)		((1 << LENGTH(tags)) << (i))
@@ -1799,7 +1801,7 @@ setup(void)
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
 	lrpad = drw->fonts->h;
-	bh = drw->fonts->h + 2;
+	bh = drw->fonts->h + TBPADDING;
 	updategeom();
 	/* init atoms */
 	utf8string = XInternAtom(dpy, "UTF8_STRING", False);
