@@ -15,7 +15,7 @@ static const char *fonts[]          = {
 	"Cascadia Mono PL:size=14:antialias=true:autohint=true",
 	"Apple Color Emoji:size=12:antialias=true:autohint=true"
 };
-static char dmenufont[]             = "monospace:size=10";
+static char dmenufont[]             = "Cascadia Mono PL:size=14";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
