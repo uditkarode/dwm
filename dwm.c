@@ -857,15 +857,15 @@ drawbar(Monitor *m)
 	int boxs = drw->fonts->h / 9;
 	int boxw = drw->fonts->h / 6 + 2;
 	char *ts = stext;
-    char *tp = stext;
-    int tx = 0;
-    char ctmp;
+  char *tp = stext;
+  int tx = 0;
+  char ctmp;
 	unsigned int i, occ = 0, urg = 0;
 	Client *c;
 
 	/* draw status first so it can be overdrawn by tags later */
 	if (m == selmon) { /* status is only drawn on selected monitor */
-		drw_setscheme(drw, scheme[SchemeNorm]);
+		drw_setscheme(drw, scheme[SchemeYellow]);
 		tw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
 		while (1) {
 			if ((unsigned int)*ts > LENGTH(colors)) { ts++; continue ; }
@@ -906,7 +906,7 @@ drawbar(Monitor *m)
 			if (m->sel->isfloating)
 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
 		} else {
-			drw_setscheme(drw, scheme[SchemeNorm]);
+			drw_setscheme(drw, scheme[SchemeBlue]);
 			drw_rect(drw, x, 0, w, bh, 1, 1);
 		}
 	}
