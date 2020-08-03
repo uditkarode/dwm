@@ -88,7 +88,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel, SchemeYellow, SchemeRed, SchemeGreen, SchemeBlue, SchemeMagenta, SchemeCyan };
+enum { SchemeNorm, SchemeSel, SchemeYellow, SchemeRed, SchemeGreen, SchemeBlue, SchemeMagenta, SchemeCyan, SchemeBg };
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -906,7 +906,7 @@ drawbar(Monitor *m)
 			if (m->sel->isfloating)
 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
 		} else {
-			drw_setscheme(drw, scheme[SchemeBlue]);
+			drw_setscheme(drw, scheme[SchemeBg]);
 			drw_rect(drw, x, 0, w, bh, 1, 1);
 		}
 	}

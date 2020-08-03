@@ -39,7 +39,8 @@ static char *colors[][3] = {
 	   [SchemeGreen]   = { col_background,  col_green,       col_green },
 	   [SchemeBlue]    = { col_background,  col_blue,        col_blue },
 	   [SchemeMagenta] = { col_background,  col_magenta,     col_magenta },
-	   [SchemeCyan]    = { col_foreground,  col_cyan,        col_cyan }
+	   [SchemeCyan]    = { col_foreground,  col_cyan,        col_cyan },
+     [SchemeBg]       = {normbgcolor, normbgcolor, normbgcolor}
 };
 
 typedef struct {
