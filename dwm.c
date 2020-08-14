@@ -47,7 +47,7 @@
 #include "drw.h"
 #include "util.h"
 
-#define TBPADDING 12
+#define TBPADDING 8
 
 /* macros */
 #define BUTTONMASK              (ButtonPressMask|ButtonReleaseMask)
